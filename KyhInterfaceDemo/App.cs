@@ -2,6 +2,52 @@
 
 namespace KyhInterfaceDemo;
 
+public class Team
+{
+    public string Name { get; set; }
+
+    public List<Player> Players { get; set; }
+
+}
+
+public class Player
+{
+    public string Name { get; set; }
+    public int Jersey { get; set; }
+    //public Team Team { get; set; }
+}
+
+
+public class Console
+{
+    public string Name { get; set; } // Tex PS5
+    public List<Game> Games { get; set; }
+}
+public class User
+{
+    public string Name { get; set; }
+    public List<Console> Consoles { get; set; }
+
+}
+
+public class Game
+{
+    public string Name { get; set; }
+    public List<Console> Consoles { get; set; }
+}
+
+public class GameResult
+{
+    public DateTime Datum { get; set; }
+    public int Points { get; set; }
+    public User User { get; set; }
+
+    public Game Game { get; set; }
+    public Console Console { get; set; }
+
+}
+
+
 public interface IDogSaving // Löfte, kontrakt, Power plug med två hål
 {
     public void Save(List<string> dogNames);
